@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/ayan_/Desktop/Development/cpp-hypervisor/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin23-g++-14   -g -std=gnu++20 -arch arm64 -o CMakeFiles/cpp-hypervisor.dir/main.cpp.o -c /Users/ayan_/Desktop/Development/cpp-hypervisor/main.cpp",
+  "file": "/Users/ayan_/Desktop/Development/cpp-hypervisor/main.cpp",
+  "output": "CMakeFiles/cpp-hypervisor.dir/main.cpp.o"
+}
+]
