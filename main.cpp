@@ -1,20 +1,16 @@
 #define KVM_FD "/dev/kvm"
-#define RAM_SIZE 1024 * 1024 * 1024
+#define RAM_SIZE 512000000
+#define VCPU_COUNT 1
 
-struct kvm {
-    int kvm_fd;
-    int ram_fd;
-    int ram_size;
-    int vcpu_count;
-    struct vcpu *vcpus;
-};
+#include "kvm.hpp"
 
-struct vcpu {
-    int vcpu_fd;
-    int vcpu_id;
-};
+
 
 int main() {
-
+    kvm kvm;
+    microVM vm(kvm.create_vm(VCPU_COUNT, RAM_SIZE));
+    vm.run();
+    vm.stop();
+    vm.destroy();
     return 0;
 }
